@@ -21,11 +21,11 @@ builds:
         -X main.GitCommit={{ .Commit }}
         -X main.BuildDate={{ .Date }}
 archives:
-  - builds:
+  - ids:
       - dt
     format_overrides:
       - goos: windows
-        format: zip
+        formats: [ zip ]
 checksum:
   algorithm: sha256
 changelog:
